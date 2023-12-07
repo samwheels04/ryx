@@ -1,0 +1,42 @@
+---
+title: "Untitled"
+author: "Sam Wheeler"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+plot(x)
+```
+
+
+
+```{r}
+x <- ryx(Boston, y="medv")
+names <- x$df$variable
+names
+corr <- x$df$r
+length(corr)
+length(names)
+plot(names, corr)
+
+plot(mtcars$mpg, mtcars$wt,
+       xlab = "mpg",
+       ylab = "weight",
+       main = paste("Correlation with"),
+       pch = 16,
+       col = "blue")
+
+
+```
+
+
+
+
+

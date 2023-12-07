@@ -1,0 +1,31 @@
+---
+title: "Introduction to ryx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to ryx}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The `ryx\` package is a project containing one main function which returns an ryx object and 3 generic functions that take ryx objects as their input and return information about the ryx. An ryx object shows the correlations, p values, and significance of a certain y variable against multiple x variables.
+
+```{r setup}
+library(ryx)
+```
+
+
+```{r example}
+library(ryx)
+x <- ryx(mtcars, y="mpg")
+print(x)
+plot(x)
+summary(x)
+```
+
